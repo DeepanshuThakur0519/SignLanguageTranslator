@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign Language Translator</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🤟 Sign Language Translator</h1>
+    <p class="subtitle">Real-time hand-gesture to text &amp; speech translation</p>
+  </header>
+
+  <main>
+    <section class="video-panel">
+      <div class="video-wrapper">
+        <video id="webcam" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+      </div>
+      <div class="controls">
+        <button id="startBtn">Start Camera</button>
+        <button id="stopBtn" disabled>Stop Camera</button>
+        <label class="toggle">
+          <input type="checkbox" id="speakToggle" checked />
+          Speak translated words
+        </label>
+      </div>
+      <p id="status" class="status">Camera stopped</p>
+    </section>
+
+    <section class="output-panel">
+      <h2>Translated Output</h2>
+      <div id="currentLabel" class="current-label">–</div>
+      <div id="confidence" class="confidence"></div>
+
+      <h3>Sentence</h3>
+      <div id="sentence" class="sentence"></div>
+      <div class="sentence-controls">
+        <button id="spaceBtn">Add Space</button>
+        <button id="backspaceBtn">Backspace</button>
+        <button id="clearBtn">Clear</button>
+        <button id="speakSentenceBtn">🔊 Speak Sentence</button>
+      </div>
+
+      <h3>Model Info</h3>
+      <div id="modelInfo" class="model-info">Checking backend…</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mini Project (BCC 351) — Sign Language Translator for Hearing and Speech Impaired Individuals</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
